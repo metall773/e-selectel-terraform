@@ -1,4 +1,5 @@
 # Initialize Selectel provider with token.
+
 provider "selectel" {
   token = var.sel_token
 }

@@ -1,19 +1,3 @@
-# Initialize Selectel provider with token.
-provider "selectel" {
-  token = var.sel_token
-}
-
-# Create the main project with user.
-# This module should be applied first:
-# terraform apply -target=module.project_with_user
-module "project_with_user" {
-  source = "../../../modules/vpc/project_with_user"
-
-  project_name  = var.project_name
-  user_name     = var.user_name
-  user_password = var.user_password
-}
-
 # Create an OpenStack Compute instance.
 module "server_local_root_disk" {
   source = "../../../modules/vpc/server_local_root_disk"
