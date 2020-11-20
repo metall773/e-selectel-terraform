@@ -15,7 +15,7 @@ module "server_local_root_disk" {
   server_vcpus        = var.server_vcpus
   server_ram_mb       = var.server_ram_mb
   server_root_disk_gb = var.server_root_disk_gb
-  server_image_name   = var.server_image_name
+  server_image_name   = "test-vm"
   server_ssh_key      = file("~/.ssh/id_rsa.pub")
   server_ssh_key_user = module.project_with_user.user_id
 }
