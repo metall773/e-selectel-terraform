@@ -4,8 +4,8 @@ terraform {
     key                         = "dev/dev_terraform.tfstate"
     region                      = "ru-1a"
     endpoint                    = "https://s3.selcdn.ru"
-    access_key                  = "137805"
-    secret_key                  = "+FPQm$/{1I"
+    access_key                  = "XXXXXXXXXXX"
+    secret_key                  = "YYYYYYYYYYY"
     skip_region_validation      = true
     skip_credentials_validation = true
     force_path_style            = true
