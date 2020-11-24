@@ -47,3 +47,7 @@ variable "server_ram_mb" {
 variable "server_root_disk_gb" {
   default = 8
 }
+
+variable "server_image_name" {
+  default = "CentOS 7 Minimal 64-bit"
+}
