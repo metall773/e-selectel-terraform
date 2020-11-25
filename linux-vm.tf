@@ -1,8 +1,12 @@
+locals {
+  os_project_name = format("%s-%s-env", var.project_name, var.environment) 
+}
+
 module "server_local_root_disk" {
   source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/server_local_root_disk"
 
   # OpenStack auth.
-  os_project_name  = format("%s-%s-environment", var.project_name, var.environment)
+  os_project_name  = local.os_project_name
   os_user_name     = var.user_name
   os_user_password = var.user_password
   os_domain_name   = var.sel_account
