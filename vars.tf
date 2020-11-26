@@ -25,7 +25,7 @@ variable "os_auth_url" {
 }
 
 variable "os_region" {
-  default = "ru-3"
+  default = "ru-7"
 }
 
 variable "server_name" {
@@ -33,7 +33,7 @@ variable "server_name" {
 }
 
 variable "server_zone" {
-  default = "ru-3a"
+  default = "ru-7a"
 }
 
 variable "server_vcpus" {
