@@ -3,7 +3,7 @@ locals {
 }
 
 module "bitrix01" {
-  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/server_local_root_disk"
+  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos7"
 
   # OpenStack auth.
   os_project_name  = local.os_project_name
@@ -34,7 +34,7 @@ module "bitrix01" {
 }
 
 module "lb01" {
-  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/server_local_root_disk"
+  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos8"
 
   # OpenStack auth.
   os_project_name  = local.os_project_name
@@ -45,7 +45,7 @@ module "lb01" {
   os_region        = var.os_region
 
   # OpenStack Instance parameters.
-  server_name         = var.server_name
+  server_name         = "lb01"
   server_zone         = var.server_zone
   server_vcpus        = var.server_vcpus
   server_ram_mb       = var.server_ram_mb
