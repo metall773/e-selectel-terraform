@@ -22,4 +22,13 @@ module "server_local_root_disk" {
   server_image_name   = var.server_image_name
   server_ssh_key      = file("~/.ssh/id_rsa.pub")
   server_ssh_key_user = module.project_with_user.user_id
+
+  vm_packages_4_install = "mc nmon htop"
+  vm_install_autoupdate = "yes"
+  vm_install_fail2ban   = "yes"
+  vm_firewall_udp_ports = ""
+  vm_firewall_tcp_ports = "22 80 443"
+  vm_install_bitrix     = "yes"
+  vm_install_bitrix_crm = "no"
+  vm_admin-username     = var.user_name
 }
