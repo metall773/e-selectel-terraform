@@ -4,7 +4,7 @@ resource "selectel_domains_domain_v1" "domain_1" {
 
 resource "selectel_domains_record_v1" "a_record_1" {
   domain_id = selectel_domains_domain_v1.domain_1.id
-  name = "a.selectel.xj7.ruz"
+  name = "a.selectel.xj7.ru"
   type = "A"
   content = "127.0.0.1"
   ttl = 60
