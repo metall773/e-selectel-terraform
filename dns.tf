@@ -1,5 +1,10 @@
+#https://registry.terraform.io/providers/selectel/selectel/latest/docs/resources/domains_record_v1
 resource "selectel_domains_domain_v1" "domain_1" {
   name = "selectel.xj7.ru"
+}
+
+resource "selectel_domains_domain_v1" "domain_dev" {
+  name = "${var.environment}.selectel.e-tiketka.com"
 }
 
 resource "selectel_domains_record_v1" "a_record_bitrix01" {
