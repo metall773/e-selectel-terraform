@@ -53,15 +53,15 @@ variable "server_image_name" {
 }
 
 variable "router_external_net_name" {
-  default = "${var.environment}_external_network"
+  default = "external_network"
 }
 
 variable "router_name" {
-  default = "${var.environment}_router"
+  default = "router"
 }
 
 variable "network_name" {
-  default = "${var.environment}_network"
+  default = "network"
 }
 
 variable "subnet_cidr" {
