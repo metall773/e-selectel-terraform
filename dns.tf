@@ -1,4 +1,4 @@
 #https://registry.terraform.io/providers/selectel/selectel/latest/docs/resources/domains_record_v1
 resource "selectel_domains_domain_v1" "domain" {
-  name = "${var.environment}.selectel.e-tiketka.com"
+  name = "local.dns_domain
 }

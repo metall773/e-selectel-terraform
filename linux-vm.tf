@@ -1,5 +1,6 @@
 locals {
   os_project_name = format("%s-%s-env", var.project_name, var.environment)
+  dns_domain      = "${var.environment}.selectel.e-tiketka.com"
 }
 
 module "bitrix01" {
@@ -25,6 +26,7 @@ module "bitrix01" {
   network_id          = module.network.network_id
   subnet_id           = module.network.subnet_id
   vm_dns_domain_id    = selectel_domains_domain_v1.domain.id
+  vm_dns_domain_name  = local.dns_domain
 
   vm_packages_4_install = "mc nmon htop"
   vm_firewall_tcp_ports = "22 80 443"
@@ -54,6 +56,7 @@ module "lb01" {
   network_id          = module.network.network_id
   subnet_id           = module.network.subnet_id
   vm_dns_domain_id    = selectel_domains_domain_v1.domain.id
+  vm_dns_domain_name  = local.dns_domain
 
   vm_packages_4_install = "mc nmon htop nginx"
   vm_firewall_tcp_ports = "22 80 443"
