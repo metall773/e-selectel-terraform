@@ -26,13 +26,8 @@ module "bitrix01" {
   subnet_id           = module.network.subnet_id
 
   vm_packages_4_install = "mc nmon htop"
-  vm_install_autoupdate = "yes"
-  vm_install_fail2ban   = "yes"
-  vm_firewall_udp_ports = ""
   vm_firewall_tcp_ports = "22 80 443"
   vm_install_bitrix     = "yes"
-  vm_install_bitrix_crm = "no"
-  vm_admin-username     = var.user_name
 }
 
 module "lb01" {
@@ -59,11 +54,6 @@ module "lb01" {
   subnet_id           = module.network.subnet_id
 
   vm_packages_4_install = "mc nmon htop nginx"
-  vm_install_autoupdate = "yes"
-  vm_install_fail2ban   = "yes"
-  vm_firewall_udp_ports = ""
   vm_firewall_tcp_ports = "22 80 443"
-  vm_install_bitrix     = "no"
-  vm_install_bitrix_crm = "no"
-  vm_admin-username     = var.user_name
+  enable_floatingip     = true
 }
