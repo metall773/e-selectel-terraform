@@ -1,5 +1,5 @@
 locals {
-  os_project_name = format("%s-%s-env", var.project_name, var.environment) 
+  os_project_name = format("%s-%s-env", var.project_name, var.environment)
 }
 
 module "bitrix01" {
@@ -53,6 +53,8 @@ module "lb01" {
   server_image_name   = "CentOS 8 64-bit"
   server_ssh_key      = file("~/.ssh/id_rsa.pub")
   server_ssh_key_user = module.project_with_user.user_id
+  network_id          = openstack_networking_network_v2.network_1.id
+  subnet_id           = openstack_networking_subnet_v2.subnet_1.id
 
   vm_packages_4_install = "mc nmon htop nginx"
   vm_install_autoupdate = "yes"
