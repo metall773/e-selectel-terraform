@@ -9,7 +9,7 @@ module "network" {
   os_auth_url      = var.os_auth_url
   os_region        = var.os_region
 
-  router_external_net_name = "${var.environment}-external_network"
+  router_external_net_name = "external-network"
   router_name              = "${var.environment}-router"
   network_name             = "${var.environment}-network"
   subnet_cidr              = "192.168.70.0/24"
