@@ -55,6 +55,8 @@ module "lb01" {
   server_image_name   = "CentOS 8 64-bit"
   server_ssh_key      = file("~/.ssh/id_rsa.pub")
   server_ssh_key_user = module.project_with_user.user_id
+  network_id          = module.network.network_id
+  subnet_id           = module.network.subnet_id
 
   vm_packages_4_install = "mc nmon htop nginx"
   vm_install_autoupdate = "yes"
