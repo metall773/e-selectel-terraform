@@ -24,6 +24,7 @@ module "bitrix01" {
   server_ssh_key_user = module.project_with_user.user_id
   network_id          = module.network.network_id
   subnet_id           = module.network.subnet_id
+  vm_dns_domain_id    = selectel_domains_domain_v1.domain.id
 
   vm_packages_4_install = "mc nmon htop"
   vm_firewall_tcp_ports = "22 80 443"
@@ -52,6 +53,7 @@ module "lb01" {
   server_ssh_key_user = module.project_with_user.user_id
   network_id          = module.network.network_id
   subnet_id           = module.network.subnet_id
+  vm_dns_domain_id    = selectel_domains_domain_v1.domain.id
 
   vm_packages_4_install = "mc nmon htop nginx"
   vm_firewall_tcp_ports = "22 80 443"
