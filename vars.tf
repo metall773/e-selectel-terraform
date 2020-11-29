@@ -11,7 +11,7 @@ variable "project_name" {
 }
 
 variable "user_name" {
-  default = "tf_user"
+  default = "tf-user"
 }
 
 variable "user_password" {}
@@ -29,7 +29,7 @@ variable "os_region" {
 }
 
 variable "server_name" {
-  default = "tf_server"
+  default = "tf-server"
 }
 
 variable "server_zone" {
