@@ -10,10 +10,6 @@ variable "project_name" {
   default = "e"
 }
 
-variable "user_name" {
-  default = "tf-user"
-}
-
 variable "user_password" {}
 
 variable "keypair_name" {
@@ -48,6 +44,7 @@ variable "server_root_disk_gb" {
   default = 8
 }
 
-variable "server_image_name" {
-  default = "CentOS 7 Minimal 64-bit"
+variable "localnet" {
+  description = "Environment localnet"
+  default     = "192.168.70.0/24"
 }

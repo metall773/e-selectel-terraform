@@ -12,5 +12,5 @@ module "network" {
   router_external_net_name = "external-network"
   router_name              = "${var.environment}-router"
   network_name             = "${var.environment}-network"
-  subnet_cidr              = "192.168.70.0/24"
+  subnet_cidr              = var.localnet
 }

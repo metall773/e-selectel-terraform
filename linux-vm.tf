@@ -1,6 +1,7 @@
 locals {
-  os_project_name = format("%s-%s-env", var.project_name, var.environment)
+  os_project_name = "${var.project_name}-${var.environment}-env"
   dns_domain      = "${var.environment}.selectel.e-tiketka.com"
+  user_name       = "${var.environment}-tf-user"
 }
 
 module "bitrix01" {
@@ -60,6 +61,7 @@ module "lb01" {
 
   vm_packages_4_install = "mc nmon htop nginx"
   vm_firewall_tcp_ports = "22 80 443"
+  vm_firewall_sshd_net  = var.localnet
   enable_floatingip     = true
 }
 
