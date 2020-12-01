@@ -1,5 +1,5 @@
 module "bitrix01" {
-  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos7"
+  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
 
   # OpenStack Instance parameters.
   server_name         = "bitrix01"
@@ -22,7 +22,7 @@ module "bitrix01" {
 }
 
 module "lb01" {
-  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos8"
+  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
 
   # OpenStack Instance parameters.
   server_name         = "lb01"
@@ -30,7 +30,6 @@ module "lb01" {
   server_vcpus        = 2
   server_ram_mb       = 4096
   server_root_disk_gb = 16
-  server_image_name   = "CentOS 8 64-bit"
   server_ssh_key      = file("~/.ssh/id_rsa.pub")
   server_ssh_key_user = module.project_with_user.user_id
   network_id          = module.network.network_id
@@ -45,7 +44,7 @@ module "lb01" {
 }
 
 module "bastion01" {
-  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos8"
+  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
 
   # OpenStack Instance parameters.
   server_name         = "bastion01"
@@ -53,7 +52,6 @@ module "bastion01" {
   server_vcpus        = 2
   server_ram_mb       = 2048
   server_root_disk_gb = 8
-  server_image_name   = "CentOS 8 64-bit"
   server_ssh_key      = file("~/.ssh/id_rsa.pub")
   server_ssh_key_user = module.project_with_user.user_id
   network_id          = module.network.network_id
