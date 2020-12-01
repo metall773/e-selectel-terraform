@@ -1,14 +1,6 @@
 module "bitrix01" {
   source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos7"
 
-  # OpenStack auth.
-  os_project_name  = local.os_project_name
-  os_user_name     = local.user_name
-  os_user_password = var.user_password
-  os_domain_name   = var.sel_account
-  os_auth_url      = var.os_auth_url
-  os_region        = var.os_region
-
   # OpenStack Instance parameters.
   server_name         = "bitrix01"
   server_zone         = var.server_zone
@@ -32,14 +24,6 @@ module "bitrix01" {
 module "lb01" {
   source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos8"
 
-  # OpenStack auth.
-  os_project_name  = local.os_project_name
-  os_user_name     = local.user_name
-  os_user_password = var.user_password
-  os_domain_name   = var.sel_account
-  os_auth_url      = var.os_auth_url
-  os_region        = var.os_region
-
   # OpenStack Instance parameters.
   server_name         = "lb01"
   server_zone         = var.server_zone
@@ -62,14 +46,6 @@ module "lb01" {
 
 module "bastion01" {
   source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos8"
-
-  # OpenStack auth.
-  os_project_name  = local.os_project_name
-  os_user_name     = local.user_name
-  os_user_password = var.user_password
-  os_domain_name   = var.sel_account
-  os_auth_url      = var.os_auth_url
-  os_region        = var.os_region
 
   # OpenStack Instance parameters.
   server_name         = "bastion01"
