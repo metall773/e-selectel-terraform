@@ -1,9 +1,3 @@
-locals {
-  os_project_name = "${var.project_name}-${var.environment}-env"
-  dns_domain      = "${var.environment}.selectel.e-tiketka.com"
-  user_name       = "${var.environment}-tf-user"
-}
-
 module "bitrix01" {
   source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos7"
 
@@ -31,6 +25,7 @@ module "bitrix01" {
 
   vm_packages_4_install = "mc nmon htop"
   vm_firewall_tcp_ports = "22 80 443"
+  vm_firewall_sshd_net  = var.localnet
   vm_install_bitrix     = "yes"
 }
 
@@ -48,9 +43,9 @@ module "lb01" {
   # OpenStack Instance parameters.
   server_name         = "lb01"
   server_zone         = var.server_zone
-  server_vcpus        = var.server_vcpus
-  server_ram_mb       = var.server_ram_mb
-  server_root_disk_gb = var.server_root_disk_gb
+  server_vcpus        = 2
+  server_ram_mb       = 4096
+  server_root_disk_gb = 16
   server_image_name   = "CentOS 8 64-bit"
   server_ssh_key      = file("~/.ssh/id_rsa.pub")
   server_ssh_key_user = module.project_with_user.user_id
@@ -79,9 +74,9 @@ module "bastion01" {
   # OpenStack Instance parameters.
   server_name         = "bastion01"
   server_zone         = var.server_zone
-  server_vcpus        = var.server_vcpus
-  server_ram_mb       = var.server_ram_mb
-  server_root_disk_gb = var.server_root_disk_gb
+  server_vcpus        = 2
+  server_ram_mb       = 2048
+  server_root_disk_gb = 8
   server_image_name   = "CentOS 8 64-bit"
   server_ssh_key      = file("~/.ssh/id_rsa.pub")
   server_ssh_key_user = module.project_with_user.user_id
