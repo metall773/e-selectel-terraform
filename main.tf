@@ -5,11 +5,10 @@ locals {
 }
 
 provider "openstack" {
-  user_name           = var.os_user_name
-  tenant_name         = var.os_project_name
-  password            = var.os_user_password
-  project_domain_name = var.os_domain_name
-  user_domain_name    = var.os_domain_name
-  auth_url            = var.os_auth_url
-  region              = var.os_region
+  os_project_name  = local.os_project_name
+  os_user_name     = local.user_name
+  os_user_password = var.user_password
+  os_domain_name   = var.sel_account
+  os_auth_url      = var.os_auth_url
+  os_region        = var.os_region
 }
