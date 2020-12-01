@@ -5,7 +5,7 @@ locals {
 }
 
 provider "openstack" {
-fix2  user_name           = local.user_name
+  user_name           = local.user_name
   tenant_name         = local.os_project_name
   password            = var.user_password
   project_domain_name = var.sel_account
