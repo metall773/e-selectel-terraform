@@ -27,7 +27,7 @@ module "bitrix02" {
   # OpenStack Instance parameters.
   server_name         = "bitrix02"
   server_zone         = var.server_zone
-  server_vcpus        = var.server_vcpus
+  server_vcpus        = 3
   server_ram_mb       = var.server_ram_mb
   server_root_disk_gb = var.server_root_disk_gb
   server_ssh_key      = file("~/.ssh/id_rsa.pub")
