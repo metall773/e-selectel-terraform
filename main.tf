@@ -2,6 +2,24 @@ locals {
   os_project_name = "${var.project_name}-${var.environment}-env"
   dns_domain      = "${var.environment}.selectel.e-tiketka.com"
   user_name       = "${var.environment}-tf-user"
+
+  bitrix_vm = {
+    "catalog-merlion"  = { 
+        server_vcpus        = 4
+        server_ram_mb       = 8
+        server_root_disk_gb = 80
+      },
+    "multibonus"  = { 
+        server_vcpus        = 4
+        server_ram_mb       = 8
+        server_root_disk_gb = 80
+      },
+    "urozhai"    = = { 
+        server_vcpus        = 4
+        server_ram_mb       = 8
+        server_root_disk_gb = 80
+      }
+  }
 }
 
 provider "openstack" {
