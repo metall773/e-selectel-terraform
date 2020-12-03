@@ -2,3 +2,11 @@
 resource "selectel_domains_domain_v1" "domain" {
   name = local.dns_domain
 }
+
+resource "selectel_domains_record_v1" "cname_record_1" {
+  domain_id = selectel_domains_domain_v1.domain.id
+  name = "bitrix01.${local.dns_domain}"
+  type = "CNAME"
+  content = module.lb01.server_FQDN
+  ttl = 60
+}
