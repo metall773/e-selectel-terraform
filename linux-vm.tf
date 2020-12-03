@@ -46,6 +46,7 @@ module "bitrix" {
 
   # OpenStack Instance parameters.
   for_each            = local.bitrix_vm
+  
   server_name         = each.key
   server_vcpus        = each.value.server_vcpus
   server_ram_mb       = each.value.server_ram_mb
