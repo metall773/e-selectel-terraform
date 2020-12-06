@@ -4,17 +4,7 @@ locals {
   user_name       = "${var.environment}-tf-user"
 
   bitrix_vm = {
-    "catalog-merlion" = {
-      server_vcpus        = 4
-      server_ram_mb       = 8000
-      server_root_disk_gb = 80
-    },
     "multibonus" = {
-      server_vcpus        = 4
-      server_ram_mb       = 8000
-      server_root_disk_gb = 80
-    },
-    "nlmk" = {
       server_vcpus        = 4
       server_ram_mb       = 8000
       server_root_disk_gb = 80
