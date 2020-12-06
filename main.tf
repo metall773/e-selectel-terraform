@@ -14,6 +14,11 @@ locals {
       server_ram_mb       = 8000
       server_root_disk_gb = 80
     },
+    "nlmk" = {
+      server_vcpus        = 4
+      server_ram_mb       = 8000
+      server_root_disk_gb = 80
+    },
     "urozhai" = {
       server_vcpus        = 4
       server_ram_mb       = 8000
