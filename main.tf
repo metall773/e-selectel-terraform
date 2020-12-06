@@ -1,18 +1,13 @@
 locals {
   os_project_name = "${var.project_name}-${var.environment}-env"
-  dns_domain      = "${var.environment}.selectel.e-tiketka.com"
+  dns_domain      = "${var.environment}.selectel.xj7.ru"
   user_name       = "${var.environment}-tf-user"
 
   bitrix_vm = {
-    "multibonus" = {
-      server_vcpus        = 4
-      server_ram_mb       = 8000
-      server_root_disk_gb = 80
-    },
-    "urozhai" = {
-      server_vcpus        = 4
-      server_ram_mb       = 8000
-      server_root_disk_gb = 80
+    "bitrix" = {
+      server_vcpus        = 2
+      server_ram_mb       = 4000
+      server_root_disk_gb = 8
     }
   }
 }
