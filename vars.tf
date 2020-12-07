@@ -43,7 +43,7 @@ variable "compute_ram_quotas" {
   default     = "32768"
 }
 
-variable "volume_gigabytes_basic" {
+variable "volume_gigabytes_basic_quotas" {
   description = "Basic Disk quota in Gb for the project"
   default     = "250"
 }
