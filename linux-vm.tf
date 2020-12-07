@@ -26,7 +26,7 @@ module "bastion01" {
   # OpenStack Instance parameters.
   server_name         = "bastion01"
   server_zone         = var.server_zone
-  server_vcpus        = 2
+  server_vcpus        = 1
   server_ram_mb       = 2048
   server_root_disk_gb = 8
   server_ssh_key      = file("~/.ssh/id_rsa.pub")
