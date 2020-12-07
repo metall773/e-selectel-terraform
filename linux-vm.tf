@@ -5,7 +5,7 @@ module "lb01" {
   server_name         = "lb01"
   server_zone         = var.server_zone
   server_vcpus        = 2
-  server_ram_mb       = 4096
+  server_ram_mb       = 3072
   server_root_disk_gb = 16
   server_ssh_key      = file("~/.ssh/id_rsa.pub")
   server_ssh_key_user = module.project_with_user.user_id

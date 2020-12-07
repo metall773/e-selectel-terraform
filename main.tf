@@ -5,13 +5,13 @@ locals {
 
   bitrix_vm = {
     "multibonus" = {
-      server_vcpus        = 4
-      server_ram_mb       = 8000
+      server_vcpus        = 2
+      server_ram_mb       = 4096
       server_root_disk_gb = 80
     },
     "urozhai" = {
-      server_vcpus        = 4
-      server_ram_mb       = 8000
+      server_vcpus        = 2
+      server_ram_mb       = 4096
       server_root_disk_gb = 80
     }
   }
