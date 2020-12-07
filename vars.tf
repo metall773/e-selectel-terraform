@@ -33,10 +33,6 @@ variable "localnet" {
   default     = "192.168.70.0/24"
 }
 
-variable "os_region" {
-  default = "ru-7"
-}
-
 variable "compute_cores_quotas" {
   description = "CPU cores quota for the project"
   default     = "16"
