@@ -11,6 +11,6 @@ module "project_with_user" {
   server_zone                  = var.server_zone
   compute_cores_quotas         = var.compute_cores_quotas
   compute_ram_quotas           = var.compute_ram_quotas
-  volume_gigabytes_basic       = var.volume_gigabytes_basic
+  volume_gigabytes_basic       = var.volume_gigabytes_basic_quotas
   volume_gigabytes_fast_quotas = var.volume_gigabytes_fast_quotas
 }
