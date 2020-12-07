@@ -1,6 +1,6 @@
 module "lb01" {
   source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
-
+  depends_on          = [ module.project_with_user ]  
   # OpenStack Instance parameters.
   server_name         = "lb01"
   server_zone         = var.server_zone
@@ -22,7 +22,7 @@ module "lb01" {
 
 module "bastion01" {
   source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
-
+  depends_on          = [ module.project_with_user ]  
   # OpenStack Instance parameters.
   server_name         = "bastion01"
   server_zone         = var.server_zone
@@ -43,7 +43,7 @@ module "bastion01" {
 
 module "bitrix" {
   source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
-
+  depends_on          = [ module.project_with_user ]  
   # OpenStack Instance parameters.
   for_each            = local.bitrix_vm
   
