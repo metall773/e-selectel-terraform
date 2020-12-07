@@ -32,3 +32,22 @@ variable "localnet" {
   description = "Environment localnet"
   default     = "192.168.70.0/24"
 }
+
+variable "os_region" {
+  default = "ru-7"
+}
+
+variable "compute_cores_quotas" {
+  description = "CPU cores quota for the project"
+  default     = "16"
+}
+
+variable "compute_ram_quotas" {
+  description = "RAM memory quota in Mb for the project"
+  default     = "24576"
+}
+
+variable "volume_gigabytes_fast_quotas" {
+  description = "Disk quota in Gb for the project"
+  default     = "200"
+}
