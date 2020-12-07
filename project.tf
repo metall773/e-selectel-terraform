@@ -9,5 +9,6 @@ module "project_with_user" {
   user_password = var.user_password
   os_region     = var.os_region
   server_zone   = var.server_zone
-  quotas        = var.quotas
+  quotas_zone   = var.quotas_zone
+  quotas_region = var.quotas_region
 }
