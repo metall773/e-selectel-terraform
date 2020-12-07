@@ -5,12 +5,12 @@ locals {
 
   bitrix_vm = {
     "catalog-merlion" = {
-      server_vcpus        = 4
+      server_vcpus        = 3
       server_ram_mb       = 8000
       server_root_disk_gb = 80
     },
     "nlmk" = {
-      server_vcpus        = 4
+      server_vcpus        = 3
       server_ram_mb       = 8000
       server_root_disk_gb = 80
     }
