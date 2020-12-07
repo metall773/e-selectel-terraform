@@ -33,27 +33,20 @@ variable "localnet" {
   default     = "192.168.74.0/24"
 }
 
-variable "compute_cores_quotas" {
-  description = "CPU cores quota for the project"
-  default = "16"
+variable "quotas_zone" {
+  type = map
+  default = {
+    compute_cores          = 32
+    compute_ram            = 32768
+    volume_gigabytes_basic = 250
+    volume_gigabytes_fast  = 250
+    volume_gigabytes_local = 250
+  }
 }
 
-variable "compute_ram_quotas" {
-  description = "RAM memory quota in Mb for the project"
-  default = "24576"
-}
-
-variable "volume_gigabytes_basic_quotas" {
-  description = "Basic Disk quota in Gb for the project"
-  default     = "250"
-}
-
-variable "volume_gigabytes_fast_quotas" {
-  description = "Disk quota in Gb for the project"
-  default = "200"
-}
-
-variable "volume_gigabytes_local_quotas" {
-  description = "Local Disk quota in Gb for the project"
-  default = "200"
+variable "quotas_region" {
+  type = map
+  default = {
+    network_floatingips = 2
+  }
 }
