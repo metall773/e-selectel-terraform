@@ -3,7 +3,7 @@ variable "sel_account" {}
 variable "sel_token" {}
 
 variable "environment" {
-  default = "prod"
+  default = "dev"
 }
 
 variable "project_name" {
@@ -30,7 +30,7 @@ variable "server_zone" {
 
 variable "localnet" {
   description = "Environment localnet"
-  default     = "192.168.75.0/24"
+  default     = "192.168.70.0/24"
 }
 
 variable "quotas_zone" {
