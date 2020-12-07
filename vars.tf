@@ -34,7 +34,7 @@ variable "localnet" {
 }
 
 variable "quotas" {
-  type = "map"
+  type = map
   default = {
     compute_cores          = 32
     compute_ram            = 32768
