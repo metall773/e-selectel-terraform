@@ -13,4 +13,5 @@ module "project_with_user" {
   compute_ram_quotas            = var.compute_ram_quotas
   volume_gigabytes_basic_quotas = var.volume_gigabytes_basic_quotas
   volume_gigabytes_fast_quotas  = var.volume_gigabytes_fast_quotas
+  volume_gigabytes_local_quotas = var.volume_gigabytes_local_quotas
 }
