@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket                      = "tfstate"
-    key                         = "ZZZZZZZZZZZ/ZZZZZZZZZZZ_terraform.tfstate"
+    key                         = "ZZZZZZZZZZZ_terraform.tfstate"
     region                      = "ru-1a"
     endpoint                    = "https://s3.selcdn.ru"
     access_key                  = "XXXXXXXXXXX"
