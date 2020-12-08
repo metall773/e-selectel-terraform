@@ -33,20 +33,18 @@ variable "localnet" {
   default     = "192.168.74.0/24"
 }
 
-variable "quotas_zone" {
+variable "quotas" {
   type = map
   default = {
-    compute_cores          = 32
-    compute_ram            = 32768
-    volume_gigabytes_basic = 250
-    volume_gigabytes_fast  = 250
-    volume_gigabytes_local = 250
-  }
-}
-
-variable "quotas_region" {
-  type = map
-  default = {
-    network_floatingips = 2
+    quotas_for_avaliability_zone = {
+      compute_cores          = 16
+      compute_ram            = 32768
+      volume_gigabytes_basic = 250
+      volume_gigabytes_fast  = 250
+      volume_gigabytes_local = 250
+    }
+    quotas_for_region = {
+      network_floatingips = 2
+    }
   }
 }
