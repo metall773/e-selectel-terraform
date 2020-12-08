@@ -1,5 +1,5 @@
 module "lb01" {
-  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
+  source     = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
   depends_on = [module.project_with_user]
   # OpenStack Instance parameters.
   server_name         = "lb01"
@@ -21,7 +21,7 @@ module "lb01" {
 }
 
 module "bastion01" {
-  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
+  source     = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
   depends_on = [module.project_with_user]
   # OpenStack Instance parameters.
   server_name         = "bastion01"
@@ -42,11 +42,10 @@ module "bastion01" {
 }
 
 module "bitrix" {
-  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
-
+  source     = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
+  depends_on = [module.project_with_user]
   # OpenStack Instance parameters.
   for_each            = local.bitrix_vm
-  depends_on = [module.project_with_user]  
   server_name         = each.key
   server_vcpus        = each.value.server_vcpus
   server_ram_mb       = each.value.server_ram_mb
