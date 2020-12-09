@@ -6,7 +6,7 @@ locals {
   bitrix_vm = {
     "bitrix" = {
       server_vcpus        = 1
-      server_ram_mb       = 4000
+      server_ram_mb       = 3072
       server_root_disk_gb = 8
     }
   }
