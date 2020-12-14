@@ -4,7 +4,7 @@ locals {
   user_name       = "${var.environment}-tf-user"
 
   bitrix_vm = {
-    "bitrix" = {
+    "bitrix1" = {
       server_vcpus        = 1
       server_ram_mb       = 3072
       server_root_disk_gb = 8

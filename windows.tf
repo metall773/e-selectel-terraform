@@ -12,7 +12,7 @@ module "win01" {
   vm_dns_domain_id    = selectel_domains_domain_v1.domain.id
   vm_dns_domain_name  = local.dns_domain
   server_image_name   = "Windows Server 2012 R2 Standard"
-  admin_pass          = "8ybwKaU2rmlJ37u2tTk6ewqlseA73O53"
+  admin_pass          = "Ghdbtn123!"
   server_second_volume_type = "fast.${server_zone}"
   server_second_disk_gb  = 22
 
