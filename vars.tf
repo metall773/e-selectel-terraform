@@ -43,6 +43,7 @@ variable "quotas" {
       volume_gigabytes_fast         = 250
       volume_gigabytes_local        = 250
       license_windows_2012_standard = 2
+      license_windows_2016_standard = 2
     }
     quotas_for_region = {
       network_floatingips = 2
