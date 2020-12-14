@@ -7,7 +7,6 @@ module "win01" {
   server_vcpus        = 1
   server_ram_mb       = 4096
   server_root_disk_gb = 32
-  server_ssh_key_user = module.project_with_user.user_id
   network_id          = module.network.network_id
   subnet_id           = module.network.subnet_id
   vm_dns_domain_id    = selectel_domains_domain_v1.domain.id
