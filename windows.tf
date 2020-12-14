@@ -14,6 +14,7 @@ module "win01" {
   server_image_name   = "Windows Server 2012 R2 Standard"
   admin_pass          = "8ybwKaU2rmlJ37u2tTk6ewqlseA73O53"
   server_second_volume_type = "fast.ru-7a"
+  server_second_disk_gb  = 22
 
   enable_floatingip   = true
 }
