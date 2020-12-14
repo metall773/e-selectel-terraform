@@ -14,7 +14,7 @@ module "win01" {
   server_image_name   = "Windows Server 2016 Standard"
   admin_pass          = "Ghdbtn123!"
   server_second_volume_type = "fast.${var.server_zone}"
-  server_second_disk_gb  = 22
+  server_second_disk_gb  = 26
 
   enable_floatingip   = true
 }
