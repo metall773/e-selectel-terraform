@@ -37,16 +37,16 @@ variable "quotas" {
   type = map
   default = {
     quotas_for_avaliability_zone = {
-      compute_cores                 = 16
-      compute_ram                   = 32768
-      volume_gigabytes_basic        = 250
-      volume_gigabytes_fast         = 250
-      volume_gigabytes_local        = 250
-      license_windows_2012_standard = 2
-      license_windows_2016_standard = 2
+      compute_cores          = 16
+      compute_ram            = 32768
+      volume_gigabytes_basic = 250
+      volume_gigabytes_fast  = 250
+      volume_gigabytes_local = 250
     }
     quotas_for_region = {
-      network_floatingips = 2
+      network_floatingips           = 2
+      license_windows_2012_standard = 2
+      license_windows_2016_standard = 2
     }
   }
 }

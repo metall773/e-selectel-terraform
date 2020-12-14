@@ -14,5 +14,5 @@ module "win01" {
   server_image_name   = "Windows Server 2012 R2 Standard"
   admin_pass          = "8ybwKaU2rmlJ37u2tTk6ewqlseA73O53"
 
-  enable_floatingip     = true
+  enable_floatingip   = true
 }
