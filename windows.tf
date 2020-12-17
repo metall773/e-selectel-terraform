@@ -1,5 +1,5 @@
 module "win01" {
-  source     = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/windows"
+  source     = "github.com/metall773/e-selectel-terraform-modules.git//modules/vpc/windows"
   depends_on = [module.project_with_user]
   # OpenStack Instance parameters.
   server_name               = "win01"
