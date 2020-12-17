@@ -1,5 +1,5 @@
 module "lb01" {
-  source     = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
+  source     = "github.com/metall773/e-selectel-terraform-modules.git//modules/vpc/centos"
   depends_on = [module.project_with_user]
   # OpenStack Instance parameters.
   server_name         = "lb01"
@@ -21,7 +21,7 @@ module "lb01" {
 }
 
 module "bastion01" {
-  source     = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
+  source     = "github.com/metall773/e-selectel-terraform-modules.git//modules/vpc/centos"
   depends_on = [module.project_with_user]
   # OpenStack Instance parameters.
   server_name         = "bastion01"
@@ -42,7 +42,7 @@ module "bastion01" {
 }
 
 module "bitrix" {
-  source     = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/centos"
+  source     = "github.com/metall773/e-selectel-terraform-modules.git//modules/vpc/centos"
   depends_on = [module.project_with_user]
   # OpenStack Instance parameters.
   for_each            = local.bitrix_vm
