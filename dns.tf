@@ -13,7 +13,6 @@ resource "selectel_domains_record_v1" "bitrix_cname_records" {
 }
 
 resource "selectel_domains_record_v1" "images_cname_records" {
-  for_each  = module.bitrix
   domain_id = selectel_domains_domain_v1.domain.id
   name      = "images.${local.dns_domain}"
   type      = "CNAME"
@@ -22,7 +21,6 @@ resource "selectel_domains_record_v1" "images_cname_records" {
 }
 
 resource "selectel_domains_record_v1" "cloudcontent_cname_records" {
-  for_each  = module.bitrix
   domain_id = selectel_domains_domain_v1.domain.id
   name      = "cloudcontent.${local.dns_domain}"
   type      = "CNAME"
