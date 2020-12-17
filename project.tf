@@ -2,7 +2,7 @@
 # This module should be applied first:
 # terraform apply -target=module.project_with_user
 module "project_with_user" {
-  source = "git@gitlab.com:lee040404/e-selectel-terraform-modules.git//modules/vpc/project_with_user"
+  source = "github.com/metall773/e-selectel-terraform-modules.git//modules/vpc/project_with_user"
 
   project_name  = local.os_project_name
   user_name     = local.user_name
