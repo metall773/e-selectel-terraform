@@ -30,7 +30,7 @@ module "w1с" {
 
 module "wterm" {
   source     = "github.com/metall773/e-selectel-terraform-modules.git//modules/vpc/windows"
-  depends_on = [module.project_with_user, module.w1с]
+  depends_on = [module.project_with_user]
   # OpenStack Instance parameters.
   server_name         = "wterm"
   server_zone         = var.server_zone
